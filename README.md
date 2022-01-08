@@ -67,16 +67,7 @@
 ![image](https://user-images.githubusercontent.com/38436717/148642350-ed5c9827-7917-4c90-aa89-52ec80039efa.png)
 
 5.3 Контроллеры
-"""C#
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using TPSema.Models;
+
 
 namespace TPSema.Controllers
 {
@@ -196,7 +187,7 @@ namespace TPSema.Controllers
     }
 }
 
-"""
+
 
 
 
