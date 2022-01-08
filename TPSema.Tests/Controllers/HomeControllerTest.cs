@@ -50,5 +50,30 @@ namespace TPSema.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
         }
+        private readonly TourDBEntities3 db = new TourDBEntities3();
+
+        [TestMethod]
+        public void TestMethod1()
+        {
+
+            CustomersController controller = new CustomersController();
+            ViewResult result = controller.Index(db.Customer.ToList()) as ViewResult;
+            Assert.IsNotNull(result);
+
+        }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            // Arrange
+            CustomersController controllers = new CustomersController();
+
+            // Act
+
+            ViewResult result = controllers.Details() as ViewResult;
+
+            // Assert
+            Assert.AreEqual(result);
+        }
     }
 }
