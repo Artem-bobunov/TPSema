@@ -47,6 +47,8 @@
  
  
  5. MVC в разарботанном приложении
+
+
  5.1  Модели
  
  
@@ -65,7 +67,7 @@
 ![image](https://user-images.githubusercontent.com/38436717/148642350-ed5c9827-7917-4c90-aa89-52ec80039efa.png)
 
 5.3 Контроллеры
-
+"""C#
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -194,7 +196,7 @@ namespace TPSema.Controllers
     }
 }
 
-
+"""
 
 
 
