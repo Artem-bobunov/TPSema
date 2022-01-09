@@ -6,14 +6,14 @@
 
 ![image](https://user-images.githubusercontent.com/38436717/148641296-137822f5-52c4-41ae-81a0-dc7efe81c138.png)
 
-1. Добавление Туристической поездки пользователем:
+1. Добавление Туристической поездки пользователем
 При появлении новой тур поездки пользователь(продавец) вносит в БД, новую услугу, для дальнейшей передачи информации туристам (покупателям):
 
 
 ![image](https://user-images.githubusercontent.com/38436717/148641533-6a914c6f-b92f-4ed5-84f9-a70518a12566.png)
 
 
-1.1 Результат добавления новой туристической услуги:
+1.1 Результат добавления новой туристической услуги
 
 
 ![image](https://user-images.githubusercontent.com/38436717/148641614-45b219a3-f4c1-479a-8a5d-2af9d07bc147.png)
@@ -67,6 +67,9 @@
 ![image](https://user-images.githubusercontent.com/38436717/148642350-ed5c9827-7917-4c90-aa89-52ec80039efa.png)
 
 5.3 Контроллеры
+
+
+Path:
 
 
 namespace TPSema.Controllers
@@ -186,6 +189,19 @@ namespace TPSema.Controllers
         }
     }
 }
+
+6. Размещение проекта на Docker
+
+6.1 Публикация проекта средствами Visual Studio 2022 в Docker
+
+
+![image](https://user-images.githubusercontent.com/38436717/148673673-9bd38809-9593-4cc4-8ef3-1286df569427.png)
+
+
+6.2 Размещение проекта в Docker
+
+
+![image](https://user-images.githubusercontent.com/38436717/148673700-c25b9bfa-9ae0-418d-9108-cf49f4b349fa.png)
 
 
 
