@@ -2,13 +2,20 @@
 
 @{
     ViewBag.Title = "Index";
+    string textboxmvc = Convert.ToString(Model.Sum(x => x.price));
 }
 
-<h2>Index</h2>
+<h2>Туристическая поездка</h2>
+<form asp-controller="Customer" asp-action="Index">
+    <p>
+        Поиск типа поездки: <input type="text" name="SearchString" />
+        <input type="submit" value="Поиск" />
+        Общая стоимость поездки: @textboxmvc рублей
+    </p>
+</form>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
+
 <table class="table">
     <tr>
         <th>
@@ -35,35 +42,38 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nameTour)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dateTour)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.daysTour)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.transport)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.residence)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.typeTour)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nameTour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateTour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.daysTour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.transport)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.residence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typeTour)
+            </td>
+            <td>
+                @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
 
 </table>
+<p>
+    @Html.ActionLink("Создать", "Create")
+</p>

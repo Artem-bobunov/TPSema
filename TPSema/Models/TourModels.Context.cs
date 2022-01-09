@@ -13,10 +13,10 @@ namespace TPSema.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TourDBEntities3 : DbContext
+    public partial class TourDBEntities4 : DbContext
     {
-        public TourDBEntities3()
-            : base("name=TourDBEntities3")
+        public TourDBEntities4()
+            : base("name=TourDBEntities4")
         {
         }
     

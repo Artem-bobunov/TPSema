@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TourDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="TourDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="Id" />
@@ -13,19 +13,19 @@
           <Property Name="nameTour" Type="nvarchar" MaxLength="50" />
           <Property Name="dateTour" Type="date" />
           <Property Name="daysTour" Type="nvarchar" MaxLength="50" />
-          <Property Name="price" Type="nvarchar" MaxLength="50" />
+          <Property Name="price" Type="money" />
           <Property Name="transport" Type="nvarchar" MaxLength="50" />
           <Property Name="residence" Type="nvarchar" MaxLength="50" />
           <Property Name="typeTour" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityContainer Name="TourDBModelStoreContainer">
+        <EntityContainer Name="TourDBModel1StoreContainer">
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="TourDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="TourDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="Id" />
@@ -34,12 +34,12 @@
           <Property Name="nameTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="dateTour" Type="DateTime" Precision="0" />
           <Property Name="daysTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="transport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="residence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="typeTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="TourDBEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TourDBEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customer" EntityType="Self.Customer" />
         </EntityContainer>
       </Schema>
@@ -47,9 +47,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TourDBModelStoreContainer" CdmEntityContainer="TourDBEntities3">
+        <EntityContainerMapping StorageEntityContainer="TourDBModel1StoreContainer" CdmEntityContainer="TourDBEntities4">
           <EntitySetMapping Name="Customer">
-            <EntityTypeMapping TypeName="TourDBModel.Customer">
+            <EntityTypeMapping TypeName="TourDBModel1.Customer">
               <MappingFragment StoreEntitySet="Customer">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="nameTour" ColumnName="nameTour" />

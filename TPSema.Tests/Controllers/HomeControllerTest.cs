@@ -15,14 +15,9 @@ namespace TPSema.Tests.Controllers
         [TestMethod]
         public void Index()
         {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.Index() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
+            CustomersController controller = new CustomersController();
+            ViewResult result = controller.Details(1) as ViewResult;
+            Assert.Equals(1, result);
         }
 
         [TestMethod]

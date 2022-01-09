@@ -16,21 +16,19 @@ namespace TPSema.Models
     public partial class Customer
     {
         public int Id { get; set; }
-        [DisplayName("Туристическая Поездка")]
+        [DisplayName("Название Тура")]
         public string nameTour { get; set; }
-        [DisplayName("Дата поездки")]
+        [DisplayName("Дата выезда")]
         public Nullable<System.DateTime> dateTour { get; set; }
         [DisplayName("Количество дней")]
         public string daysTour { get; set; }
-        [DisplayName("Цена в руб.")]
-        public string price { get; set; }
+        [DisplayName("Стоимость")]
+        public Nullable<decimal> price { get; set; }
         [DisplayName("Транспорт")]
         public string transport { get; set; }
         [DisplayName("Проживание")]
         public string residence { get; set; }
-        [DisplayName("Тип Поездки")]
+        [DisplayName("Тип Тура")]
         public string typeTour { get; set; }
     }
-
-  
 }

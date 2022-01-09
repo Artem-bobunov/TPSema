@@ -1,9 +1,11 @@
-﻿using System;
+﻿//using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using TPSema.Models;
@@ -12,13 +14,20 @@ namespace TPSema.Controllers
 {
     public class CustomersController : Controller
     {
-        private TourDBEntities3 db = new TourDBEntities3();
-
-        // GET: Customers
-        public ActionResult Index()
+        private TourDBEntities4 db = new TourDBEntities4();
+        public async Task<ActionResult> Index(string searchString)
         {
-            return View(db.Customer.ToList());
+            var typetours = from m in db.Customer
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                typetours = typetours.Where(s => s.typeTour.Contains(searchString));
+            }
+
+            return View(await typetours.ToListAsync());
         }
+
 
         // GET: Customers/Details/5
         public ActionResult Details(int? id)
@@ -124,4 +133,6 @@ namespace TPSema.Controllers
             base.Dispose(disposing);
         }
     }
+
+    
 }

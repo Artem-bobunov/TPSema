@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.31903.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPSema", "TPSema\TPSema.csproj", "{E68AA936-B008-42E9-BE9F-77C41A2862D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{AE9E2F34-82B9-4052-B45D-788B3770A6DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E68AA936-B008-42E9-BE9F-77C41A2862D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E68AA936-B008-42E9-BE9F-77C41A2862D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E68AA936-B008-42E9-BE9F-77C41A2862D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE9E2F34-82B9-4052-B45D-788B3770A6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE9E2F34-82B9-4052-B45D-788B3770A6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE9E2F34-82B9-4052-B45D-788B3770A6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE9E2F34-82B9-4052-B45D-788B3770A6DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
